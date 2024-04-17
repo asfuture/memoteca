@@ -1,0 +1,13 @@
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" ngClass="larguraPensamentos()">
+    <img src="../../../../assets/Imagens/{{pensamento.modelo}}.png " alt="Aspas coliridas">
+    <p class="conteudo">{{pensamento.conteudo}}</p>
+    <p class="autodia"><b>{{pensamento.autoria}}</b></p>
+    <div class="acoes">
+        <button class="botao-editar" routerLink="/pensamentos/editarPensamento/{{pensamento.id}}'">
+            <img src="../../../../assets/Imagens/icone-editar.png" alt="Icone de editar">
+        </button>
+        <button class="botao-excluir" routerLink="/pensamentos/excluirPensamento/{{pensamento.id}}">
+            <img src="../../../../assets/Imagens/icone-excluir.png" alt="Icone de excluir">
+        </button>
+    </div>
+</div>
