@@ -1,6 +1,6 @@
 # Memoteca
 
-## Segue link do projeto memoteca: [[https://memoteca-pensamento.netlify.app/listarPensamento](https://memoteca-pensamento.netlify.app/criarPensamento)](https://memoteca-pensamento.netlify.app/criarPensamento)
+ Segue link do projeto memoteca: https://memoteca-pensamento.netlify.app/listarPensamento
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
