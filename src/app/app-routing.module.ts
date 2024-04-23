@@ -6,9 +6,11 @@ import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensam
 import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
 import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
 import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
+import { LoginComponent } from './componentes/pensamentos/login/login.component';
 
 export const routes: Routes = [
-  {path:'',redirectTo:'criarPensamento',pathMatch:'full'},
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'login',component: LoginComponent},
   {path:'criarPensamento',component:CriarPensamentoComponent },
   {path:'listarPensamento',component:ListarPensamentoComponent },
   {path:'pensamentos/excluirPensamento/:id',component:ExcluirPensamentoComponent },
