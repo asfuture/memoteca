@@ -4,8 +4,6 @@
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-  
     .login {
       display: flex;
       flex-direction: row;

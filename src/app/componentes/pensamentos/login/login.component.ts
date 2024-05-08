@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-loginForm!: FormGroup | undefined;
+loginForm!: FormGroup;
   constructor(
     private formBuilder:FormBuilder,
     private autenticacaoService:AutenticacaoService,
@@ -29,8 +29,9 @@ loginForm!: FormGroup | undefined;
     
     this.autenticacaoService.autenticar(email, senha).subscribe({
       next:(value) => {
-        console.log('Login realizado com sucesso', value),
-        this.route.navigateByUrl('/listarPensamento')
+        console.log('Login realizado com sucesso', value)
+        this.route.navigateByUrl('/perfil'),
+        this.loginForm.reset();
       },
       error: (err) => {
         console.log('Erro no Login', err)
