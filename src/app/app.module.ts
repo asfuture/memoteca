@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,6 +15,11 @@ import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pens
 import { LoginComponent } from './componentes/pensamentos/login/login.component';
 import { AngularmaterialModule } from './angularmaterial/angularmaterial.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormularioComponent } from './componentes/pensamentos/formulario/formulario.component';
+import { CadastroComponent } from './componentes/pensamentos/cadastro/cadastro.component';
+import { PerfilComponent } from './componentes/pensamentos/perfil/perfil.component';
+import { AutenticacaoInterceptor } from './componentes/pensamentos/autenticacao.interceptor';
+import { HeaderComponent } from './componentes/pensamentos/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     PensamentoComponent,
     ExcluirPensamentoComponent,
     EditarPensamentoComponent,
-    LoginComponent
+    LoginComponent,
+    FormularioComponent,
+    CadastroComponent,
+    PerfilComponent,
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +47,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:AutenticacaoInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

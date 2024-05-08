@@ -5,28 +5,10 @@
       "conteudo": "Que bom que vc veio",
       "autoria": "Alex Ferreira",
       "modelo": "modelo1"
-    },
-    {
-      "id": 2,
-      "conteudo": "Alterando o pensamento.",
-      "autoria": "Luanda",
-      "modelo": "modelo3"
-    },
-    {
-      "conteudo": "jhasjfasdsgdsgds",
-      "autoria": "alex",
-      "modelo": "modelo3",
-      "id": 4
-    },
-    {
-      "conteudo": "teste ",
-      "autoria": "alex santos",
-      "modelo": "modelo3",
-      "id": 6
     }
   ],
   "login": {
     "email": "asfuture2019@gmail.com",
-    "senha": "04040"
+    "senha": "1234"
   }
 }
